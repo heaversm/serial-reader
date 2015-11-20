@@ -1,0 +1,11 @@
+{
+  "name": "scanner-serial",
+  "version": "0.0.1",
+  "description": "sends barcode scanner data to front end web application",
+  "dependencies": {
+    "express": "^4.13.3",
+    "serialport": "^2.0.5",
+    "socket.io": "^1.3.7",
+    "ws": "^0.8.0"
+  }
+}

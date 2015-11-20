@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WS Serial Receiver</title>
+</head>
+
+<body>
+<script src="js/lib/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script>
+
+var socket = new WebSocket("ws://localhost:8081");
+
+function init(){
+    initSockets();
+}
+
+function initSockets(){
+    socket.onopen = openSocket;
+    socket.onmessage = showData;
+}
+
+function openSocket() {
+    console.log('socket open');
+}
+
+ function showData(result) {
+    // when the server returns, show the result in the div:
+    console.log('data received',result.data);
+}
+
+init();
+
+
+</script>
+</body>
+</html>
